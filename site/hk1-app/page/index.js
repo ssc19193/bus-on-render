@@ -16,6 +16,7 @@ new Vue({
         },
     },
     mounted(){
+        document.querySelector('.container').style.opacity = 1;
       fetch(window.location.pathname +'svrs')
         .then(res=>res.json())
         .then(res=>{
