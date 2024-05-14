@@ -1,0 +1,30 @@
+new Vue({
+    el: '#app',
+    data: {
+        apps:[]
+    },
+    methods:{
+        expand(gid){
+            this.apps.forEach(app => {
+                if(app.gid === gid){
+                    app.viewSub = !app.viewSub;
+                }
+            });
+        },
+        openUrl(url){
+            window.open(url, '_blank')
+        },
+    },
+    mounted(){
+      fetch(window.location.pathname +'svrs')
+        .then(res=>res.json())
+        .then(res=>{
+            res.map(one=>{
+                one.viewSub = false;
+            })
+            this.apps.splice(0,0, ...res);
+        }).catch(e=>{
+            console.log(e)
+        })
+    }
+})
