@@ -4,7 +4,7 @@
   "description": "部署在render.com的总线服务",
   "main": "app.mjs",
   "scripts": {
-    "start": "env-cmd node app.mjs"
+    "dev": "env-cmd node app.mjs"
   },
   "repository": {
     "type": "git",
