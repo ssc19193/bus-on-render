@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    body{
+        --bdbg:#ceefe4;
+        --hdbg:#9dd3a8;
+        --appbg:#f4f0e6;
+        --urlbg:#EAD9D5;
+    }
     html,body {
       margin: 0;
       padding: 0;
@@ -11,7 +17,7 @@
       height: 100%;
       overflow: hidden;
       font-family: Arial, sans-serif;
-      background-color:#f7c59f70 ;
+      background-color:var(--bdbg) ;
     }
     svg{
         display: block;
@@ -29,7 +35,8 @@
         font-size: 32px;
         line-height: 64px;
         height: 64px;
-        background-color: #5ccdf1de;
+        background-color:var(--hdbg) ;
+        color: white;
     }
     .container{
         height: 100%;
@@ -41,15 +48,15 @@
         display:flex;
         flex-direction: column;
         line-height: 36px;
-        border-radius: 8px;
         overflow: hidden;
-        padding: 4px 0;
+        padding: 8px;
         flex: 0 0 auto;
     }
     .item-info{
-        background-color: #FFC7CE;
+        background-color:var(--appbg) ;
         display:flex;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
     }
     .item-info .item-icon{
         margin-left: 8px;
@@ -79,10 +86,11 @@
     .container .item-sub-list{
         display: flex;
         flex-direction: column;
-        background-color: #C2F2D0;
+        background-color:var(--urlbg) ;
         margin-top: 4px;
         box-shadow: 0px 4px 4px rgba(181, 144, 144, 0.25);
         transition: 100px 0.5s ease-out;
+        border-radius: 8px;
     }
     .item-sub-list .sub-item{
         display: flex;
