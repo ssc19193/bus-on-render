@@ -15,7 +15,6 @@ function register(app){
         res.send(JSON.stringify(Object.keys(apps).map(key=>apps[key])))
     })
     app.post(listenUri+'/reg', function(req,res){
-        console.log(req.body)
         if(!req.body.gid){
             return res.send('{"status":"01","msg":"gid is required"}')
         }
