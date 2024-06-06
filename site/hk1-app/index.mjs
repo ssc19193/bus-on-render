@@ -1,6 +1,7 @@
 import {getDir} from '../tool.mjs'
 import path from 'path'
 import express from 'express'
+import dayjs from 'dayjs'
 
 let listenUri = process.env['URI_HK1'] || 'hk1-app'
 let __dirname = getDir(import.meta.url)
@@ -22,7 +23,10 @@ function register(app){
         apps[req.body.gid] = {
             gid:req.body.gid,
             gname:req.body.gname,
-            urls:req.body.urls
+            urls:[ 
+                {name:'U-TIME',url:dayjs().format('YYYY-MM-DD HH:mm:ss')},
+                ...req.body.urls.map(v=>({name:v.name,url:v.url}))
+            ],
         }
         res.send(JSON.stringify({status:'00'}))
         // res.send(JSON.stringify(apps))
