@@ -29,12 +29,16 @@ function register(app){
             gid:req.body.gid,
             gname:req.body.gname,
             urls:[ 
-                {name:'U-TIME',url:dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss')},
+                {name:'U-TIME',url:dayjs().add(8,'hours').tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss')},
                 ...req.body.urls.map(v=>({name:v.name,url:v.url}))
             ],
         }
         res.send(JSON.stringify({status:'00'}))
         // res.send(JSON.stringify(apps))
     })
+
+    console.log(dayjs().format('YYYY-MM-DD HH:mm:ss'))
+    console.log(dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss'))
+    console.log(dayjs().add(8,'hours').tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss'))
 }
 export default register
