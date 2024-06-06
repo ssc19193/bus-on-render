@@ -11,7 +11,8 @@ new Vue({
                 }
             });
         },
-        openUrl(url){
+        openUrl(url ,name){
+            if(name == 'U-TIME') return
             window.open(url, '_blank')
         },
     },

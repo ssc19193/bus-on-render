@@ -2,6 +2,11 @@ import {getDir} from '../tool.mjs'
 import path from 'path'
 import express from 'express'
 import dayjs from 'dayjs'
+import utc from 'dayjs/plugin/utc.js'
+import timezone from 'dayjs/plugin/timezone.js'
+
+dayjs.extend(utc)
+dayjs.extend(timezone)
 
 let listenUri = process.env['URI_HK1'] || 'hk1-app'
 let __dirname = getDir(import.meta.url)
