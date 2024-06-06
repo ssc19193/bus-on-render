@@ -29,7 +29,7 @@ function register(app){
             gid:req.body.gid,
             gname:req.body.gname,
             urls:[ 
-                {name:'U-TIME',url:dayjs().format('YYYY-MM-DD HH:mm:ss')},
+                {name:'U-TIME',url:dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss')},
                 ...req.body.urls.map(v=>({name:v.name,url:v.url}))
             ],
         }
