@@ -20,6 +20,7 @@ function register(app){
 
     app.post(listenUri+'/push', function(req,res){
         logCache.push(dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss')+"> "+req.body)
+        if(logCache.length > 500) logCache.splice(0,200)
         res.end();
     });
     app.get(listenUri+'/pull', function(req,res){
