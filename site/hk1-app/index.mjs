@@ -37,8 +37,8 @@ function register(app){
         // res.send(JSON.stringify(apps))
     })
 
-    console.log(dayjs().format('YYYY-MM-DD HH:mm:ss'))
-    console.log(dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss'))
-    console.log(dayjs().add(8,'hours').tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss'))
+    // console.log(dayjs().format('YYYY-MM-DD HH:mm:ss'))
+    // console.log(dayjs().tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss'))
+    // console.log(dayjs().add(8,'hours').tz('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss'))
 }
 export default register
