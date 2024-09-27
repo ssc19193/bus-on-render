@@ -19,7 +19,8 @@
   "homepage": "https://github.com/ssc19193/bus-on-render#readme",
   "dependencies": {
     "dayjs": "^1.11.11",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "ws": "^8.18.0"
   },
   "engines": {
     "node": ">=14"
