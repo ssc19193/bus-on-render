@@ -9,7 +9,6 @@ let listenUri = process.env['URI_AF'] || '/animefilter'
 function register(app){
     console.log('register listen uri: '+ listenUri)
     app.use((req,res,next)=>{
-        console.log(req.url)
         if(req.url == '/animefilter/index.html' || req.url == '/animefilter/'){
             res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
             res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
